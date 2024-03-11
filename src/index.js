@@ -1,24 +1,14 @@
-import fs from 'fs';
-import path from 'path';
 import _ from 'lodash';
-
-const readFile = (filePath) => {
-  const dirName = process.cwd(filePath);
-  const fullPath = path.resolve(dirName, filePath);
-  const fileData = fs.readFileSync(fullPath, 'utf-8');
-  return fileData;
-};
-
-const parser = (data) => {
-  const parsData = JSON.parse(data);
-  return parsData;
-};
+import { readFile, getExt } from './utilits.js';
+import parser from './parsers.js';
 
 const genDiff = (filePath1, filePath2) => {
   const fileData1 = readFile(filePath1);
   const fileData2 = readFile(filePath2);
-  const fileObj1 = parser(fileData1);
-  const fileObj2 = parser(fileData2);
+  const fileExt1 = getExt(filePath1);
+  const fileExt2 = getExt(filePath2);
+  const fileObj1 = parser(fileData1, fileExt1);
+  const fileObj2 = parser(fileData2, fileExt2);
   const keysSort = _.sortBy([...new Set([...Object.keys(fileObj1), ...Object.keys(fileObj2)])]);
   const diff = keysSort
     .map((key) => {
