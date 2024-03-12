@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { readFile, getExt } from './utilits.js';
 import parser from './parsers.js';
 
-const genDiff = (filePath1, filePath2) => {
+const genDiff = (filePath1, filePath2, format) => {
   const fileData1 = readFile(filePath1);
   const fileData2 = readFile(filePath2);
   const fileExt1 = getExt(filePath1);
@@ -26,6 +26,7 @@ const genDiff = (filePath1, filePath2) => {
       return [`  - ${key}: ${value1}\n  + ${key}: ${value2}`];
     });
   const resultDiff = ['{', ...diff, '}'].join('\n');
+  console.log(format);
   return resultDiff;
 };
 
