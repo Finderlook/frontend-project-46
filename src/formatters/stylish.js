@@ -21,7 +21,7 @@ const valueStr = (val, depth) => {
   return ['{', ...result, `${spacesBrackets}}`].join('\n');
 };
 
-const format = (diff) => {
+const formatStylish = (diff) => {
   const iter = (currentIter, depth = 1) => {
     const spaces = getIndent(depth);
     const spacesBrackets = getBracketIndent(depth);
@@ -49,4 +49,4 @@ const format = (diff) => {
   return iter(diff);
 };
 
-export default format;
+export default formatStylish;
