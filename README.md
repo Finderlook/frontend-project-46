@@ -5,3 +5,6 @@
 
 ### Comparison of flat JSON and YAML files
 [![asciicast](https://asciinema.org/a/J7vCeVoFAkOd71SWHZuz4UQXG.svg)](https://asciinema.org/a/J7vCeVoFAkOd71SWHZuz4UQXG)
+
+### Comparison of deep JSON and YAML files
+[![asciicast](https://asciinema.org/a/2AtZuMVEmdv66xyuWoJN39YE2.svg)](https://asciinema.org/a/2AtZuMVEmdv66xyuWoJN39YE2)
