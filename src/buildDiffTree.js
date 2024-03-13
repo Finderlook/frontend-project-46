@@ -18,7 +18,9 @@ const getDiffTree = (data1, data2) => {
       if (_.isObject(value1) && _.isObject(value2)) {
         return { key, children: getDiffTree(value1, value2), status: 'nested' };
       }
-      return { key, value2, status: 'changed' };
+      return {
+        key, value1, value2, status: 'changed',
+      };
     });
   return diff;
 };
