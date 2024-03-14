@@ -11,7 +11,6 @@ const genDiff = (filePath1, filePath2, format) => {
   const fileObj1 = parser(fileData1, fileExt1);
   const fileObj2 = parser(fileData2, fileExt2);
   const diff = getDiffTree(fileObj1, fileObj2);
-  console.log(diff);
   const form = definFormat(diff, format);
   return form;
 };

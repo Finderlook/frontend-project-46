@@ -8,3 +8,6 @@
 
 ### Comparison of deep JSON and YAML files
 [![asciicast](https://asciinema.org/a/2AtZuMVEmdv66xyuWoJN39YE2.svg)](https://asciinema.org/a/2AtZuMVEmdv66xyuWoJN39YE2)
+
+### Comparing files in plain
+[![asciicast](https://asciinema.org/a/41J7tzf7uNqq8iyv065IaNCRN.svg)](https://asciinema.org/a/41J7tzf7uNqq8iyv065IaNCRN)
