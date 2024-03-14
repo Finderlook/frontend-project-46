@@ -4,6 +4,7 @@ import genDiff from '../src/index.js';
 
 const resultStylish = readFile('__fixtures__/resultStylish.txt');
 const resultPlain = readFile('__fixtures__/resultPlain.txt');
+const resultJson = readFile('__fixtures__/resultJson.txt');
 const json1 = '__fixtures__/file1.json';
 const json2 = '__fixtures__/file2.json';
 const yaml1 = '__fixtures__/file1.yaml';
@@ -19,6 +20,13 @@ test.each([
 test.each([
   [json1, json2, 'plain', resultPlain],
   [yaml1, yaml2, 'plain', resultPlain],
+])('genDiff Plain', (a, b, c, exp) => {
+  expect(genDiff(a, b, c)).toEqual(exp);
+});
+
+test.each([
+  [json1, json2, 'json', resultJson],
+  [yaml1, yaml2, 'json', resultJson],
 ])('genDiff Plain', (a, b, c, exp) => {
   expect(genDiff(a, b, c)).toEqual(exp);
 });
