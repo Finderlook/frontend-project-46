@@ -27,6 +27,6 @@ test.each([
 test.each([
   [json1, json2, 'json', resultJson],
   [yaml1, yaml2, 'json', resultJson],
-])('genDiff Plain', (a, b, c, exp) => {
+])('genDiff Json', (a, b, c, exp) => {
   expect(genDiff(a, b, c)).toEqual(exp);
 });
