@@ -10,15 +10,15 @@ const yaml1 = '__fixtures__/file1.yaml';
 const yaml2 = '__fixtures__/file2.yaml';
 
 test.each([
-  [json1, json2, resultStylish],
-  [yaml1, yaml2, resultStylish],
-])('genDiff Stylish', (a, b, exp) => {
-  expect(genDiff(a, b)).toEqual(exp);
+  [json1, json2, 'stylish', resultStylish],
+  [yaml1, yaml2, 'stylish', resultStylish],
+])('genDiff Stylish', (a, b, c, exp) => {
+  expect(genDiff(a, b, c)).toEqual(exp);
 });
 
 test.each([
-  [json1, json2, resultPlain],
-  [yaml1, yaml2, resultPlain],
-])('genDiff Plain', (a, b, exp) => {
-  expect(genDiff(a, b)).toEqual(exp);
+  [json1, json2, 'plain', resultPlain],
+  [yaml1, yaml2, 'plain', resultPlain],
+])('genDiff Plain', (a, b, c, exp) => {
+  expect(genDiff(a, b, c)).toEqual(exp);
 });
