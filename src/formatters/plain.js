@@ -8,19 +8,6 @@ const typeValue = (value) => {
     return `'${value}'`;
   }
   return value;
-  // if (value === null) {
-  //   return null;
-  // }
-  // switch (typeof value) {
-  //   case 'string':
-  //     return `'${value}'`;
-  //   case 'object':
-  //     return '[complex value]';
-  //   case 'boolean':
-  //     return `${value}`;
-  //   default:
-  //     throw new Error(`Unknown type: ${value}!`);
-  // }
 };
 
 const formatPlain = (diff) => {
