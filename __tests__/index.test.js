@@ -15,6 +15,7 @@ test.each([
   [yaml1, yaml2, 'stylish', resultStylish],
 ])('genDiff Stylish', (a, b, c, exp) => {
   expect(genDiff(a, b, c)).toEqual(exp);
+  expect(genDiff(a, b)).toEqual(exp);
 });
 
 test.each([
